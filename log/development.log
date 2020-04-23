@@ -1,0 +1,164 @@
+Started GET "/" for 127.0.0.1 at 2020-04-21 05:31:39 -0400
+  [1m[35m (40.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/richardrosenthal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/richardrosenthal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 68.3ms | Allocations: 481)
+Completed 200 OK in 227ms (Views: 151.6ms | ActiveRecord: 0.0ms | Allocations: 2742)
+
+
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20200421093647)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200421093647"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-21 09:37:35.063292"], ["updated_at", "2020-04-21 09:37:35.063292"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2020-04-21 05:38:26 -0400
+  [1m[35m (26.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/richardrosenthal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/richardrosenthal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.8ms | Allocations: 316)
+Completed 200 OK in 75ms (Views: 24.5ms | ActiveRecord: 0.0ms | Allocations: 1703)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-04-21 05:38:33 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (Duration: 41.8ms | Allocations: 1227)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/richardrosenthal/Desktop/blog/public/packs
+[Webpacker] Hash: 32e57f147dbdcbbf0c82
+Version: webpack 4.42.1
+Time: 5081ms
+Built at: 04/21/2020 5:38:44 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bbe9c4a129ab949e0636.js    124 KiB  application  [emitted] [immutable]  application
+js/application-bbe9c4a129ab949e0636.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bbe9c4a129ab949e0636.js js/application-bbe9c4a129ab949e0636.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 11390ms (Views: 11298.5ms | ActiveRecord: 0.9ms | Allocations: 23863)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2020-04-21 05:38:47 -0400
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 301.1ms | Allocations: 7492)
+  Rendered posts/new.html.erb within layouts/application (Duration: 325.5ms | Allocations: 7851)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 339ms (Views: 333.4ms | ActiveRecord: 0.4ms | Allocations: 14243)
+
+
+Started POST "/posts" for 127.0.0.1 at 2020-04-21 05:38:51 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"Bz/P/gb8lz06nJZiRHdlxSkCzBT/pTC5b7g5+h9uYcGIjdlO+dN/H/EvS0v+MkcELRiazWd0xf0ykSs+IXQU/Q==", "post"=>{"title"=>"What up"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "What up"], ["created_at", "2020-04-21 09:38:51.445589"], ["updated_at", "2020-04-21 09:38:51.445589"]]
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+Redirected to http://127.0.0.1:3000/posts/1
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms | Allocations: 2676)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2020-04-21 05:38:51 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 243)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 5195)
+
+
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddBodyToPosts (20200423003205)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "posts" ADD "body" text[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200423003205"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-04-23 12:24:52 -0400
+  [1m[35m (44.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/richardrosenthal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/richardrosenthal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.5ms | Allocations: 316)
+Completed 200 OK in 81ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 1937)
+
+
+Started GET "/posts" for ::1 at 2020-04-23 12:25:00 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:19
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 5186)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 94.6ms | ActiveRecord: 0.9ms | Allocations: 12933)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-23 12:25:04 -0400
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 66.3ms | Allocations: 2596)
+  Rendered posts/new.html.erb within layouts/application (Duration: 109.0ms | Allocations: 2950)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 114.7ms | ActiveRecord: 0.0ms | Allocations: 7013)
+
+
+Started POST "/posts" for ::1 at 2020-04-23 12:25:12 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"RwOGnPk3Q70n2olvwjsAHGx5gsZjWWaHfVDP1l8mYmJRKsRiKwAw9GuVHsN5aLevVkTlqN3qX83qO0PD7DOLqw==", "post"=>{"title"=>"What up 2", "body"=>"Here's a post"}, "commit"=>"Create Post"}
+[31mUnpermitted parameter: :body[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "What up 2"], ["created_at", "2020-04-23 16:25:12.714161"], ["updated_at", "2020-04-23 16:25:12.714161"]]
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms | Allocations: 2732)
+
+
+Started GET "/posts/2" for ::1 at 2020-04-23 12:25:12 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67:in `set_post'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 41.7ms | Allocations: 241)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 0.2ms | Allocations: 5199)
+
+
+Started GET "/posts" for ::1 at 2020-04-23 12:25:14 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:19
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 862)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 4762)
+
+
