@@ -22,4 +22,11 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
   end
 
+  def update
+    @page = Page.find(params[:id])
+    page_params = params.require(:page).permit(:title, :body, :slug)
+    @oage.update(page_params)
+    redirect_to @page 
+  end
+
 end
