@@ -27,7 +27,10 @@ class PagesController < ApplicationController
     redirect_to @page
   end
 
-  def page_params
-    page_params = params.require(:page).permit(:title, :body, :slug)
-  end
+  
+ private
+
+    def page_params
+      page_params = params.require(:page).permit(:title, :body, :slug)
+    end
 end
