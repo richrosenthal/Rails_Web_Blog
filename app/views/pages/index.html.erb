@@ -2,7 +2,7 @@
 
 <% @pages.each do |page| %>
   <p>
-    <%= link_to page.title, "/pages/#{page.id}" %>
+    <%= link_to page.title, page %>
 
   </p>
 <%end%>
