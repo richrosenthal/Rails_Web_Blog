@@ -12,7 +12,6 @@ class PagesController < ApplicationController
   end
 
   def create
-    page_params = params.require(:page).permit(:title, :body, :slug)
     @page = Page.new(page_params)
     @page.save
     redirect_to @page
@@ -24,9 +23,11 @@ class PagesController < ApplicationController
 
   def update
     @page = Page.find(params[:id])
-    page_params = params.require(:page).permit(:title, :body, :slug)
     @oage.update(page_params)
-    redirect_to @page 
+    redirect_to @page
   end
 
+  def page_params
+    page_params = params.require(:page).permit(:title, :body, :slug)
+  end
 end
