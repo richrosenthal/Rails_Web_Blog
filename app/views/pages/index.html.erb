@@ -1,8 +1,8 @@
 <h1>Blog Pages</h1>
 
-<% @pages.each do |index| %>
+<% @pages.each do |page| %>
   <p>
-    <%= link_to index.title, "/pages/#{index.id}" %>
+    <%= link_to page.title, "/pages/#{page.id}" %>
 
   </p>
 <%end%>
