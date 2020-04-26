@@ -2,7 +2,7 @@
 
 <% @pages.each do |index| %>
   <p>
-    <%= index.title %>
-    
+    <%= link_to index.title, "/pages/#{index.id}" %>
+
   </p>
 <%end%>
